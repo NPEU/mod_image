@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" version="3.2.0" method="upgrade">
+
+    <name>MOD_IMAGE</name>
+    <author>Andy Kirk</author>
+    <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
+    <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
+    <creationDate>August 2019</creationDate>
+    <copyright>(C) NPEU 2019</copyright>
+    <license>MIT License; see LICENSE.md</license>
+
+    <!--  The version string is recorded in the components table -->
+    <version>1.0.0</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>MOD_IMAGE_XML_DESCRIPTION</description>
+
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="NPEU: mod_image Update Site">https://raw.githubusercontent.com/NPEU/mod_image/master/update-manifest.xml</server>
+    </updateservers>
+
+    <files>
+        <file module="mod_image">mod_image.php</file>
+        <file>helper.php</file>
+        <file>index.html</file>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+        <folder>vendor</folder>
+    </files>
+    
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="images"
+                    type="subform"
+                    label="MOD_IMAGE_IMAGES_LABEL"
+                    description="MOD_IMAGE_IMAGES_DESC"
+                    multiple="true"
+                    min="1"
+                >
+                    <form>
+                        <field
+                            name="image"
+                            type="media"
+                            label="MOD_IMAGE_IMAGE_LABEL"
+                            description="MOD_IMAGE_IMAGE_DESC"
+                        />
+                        <field
+                            name="caption"
+                            type="textarea"
+                            label="MOD_IMAGE_CAPTION_LABEL"
+                            description="MOD_IMAGE_CAPTION_DESC"
+                        />
+                        <field
+                            name="alt"
+                            type="text"
+                            label="MOD_IMAGE_ALT_LABEL"
+                            description="MOD_IMAGE_ALT_DESC"
+                        />
+                        <field
+                            name="credit"
+                            type="text"
+                            label="MOD_IMAGE_CREDIT_LABEL"
+                            description="MOD_IMAGE_CREDIT_DESC"
+                        />
+                    </form>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>
