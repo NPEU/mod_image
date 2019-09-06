@@ -27,7 +27,7 @@
         <folder>tmpl</folder>
         <folder>vendor</folder>
     </files>
-    
+
     <config>
         <fields name="params">
             <fieldset name="basic">
@@ -57,12 +57,6 @@
                             type="text"
                             label="MOD_IMAGE_ALT_LABEL"
                             description="MOD_IMAGE_ALT_DESC"
-                        />
-                        <field
-                            name="credit"
-                            type="text"
-                            label="MOD_IMAGE_CREDIT_LABEL"
-                            description="MOD_IMAGE_CREDIT_DESC"
                         />
                     </form>
                 </field>
