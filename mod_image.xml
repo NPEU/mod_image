@@ -45,6 +45,7 @@
                             type="media"
                             label="MOD_IMAGE_IMAGE_LABEL"
                             description="MOD_IMAGE_IMAGE_DESC"
+                            directory="images"
                         />
                         <field
                             name="caption"
