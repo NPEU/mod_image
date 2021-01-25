@@ -43,23 +43,41 @@
                         <field
                             name="image"
                             type="media"
-                            label="MOD_IMAGE_IMAGE_LABEL"
-                            description="MOD_IMAGE_IMAGE_DESC"
+                            label="MOD_IMAGE_IMAGES_IMAGE_LABEL"
+                            description="MOD_IMAGE_IMAGES_IMAGE_DESC"
                             directory="images"
                         />
                         <field
                             name="caption"
                             type="textarea"
-                            label="MOD_IMAGE_CAPTION_LABEL"
-                            description="MOD_IMAGE_CAPTION_DESC"
+                            label="MOD_IMAGE_IMAGES_IMAGE_CAPTION_LABEL"
+                            description="MOD_IMAGE_IMAGES_IMAGE_CAPTION_DESC"
                         />
                         <field
                             name="alt"
                             type="text"
-                            label="MOD_IMAGE_ALT_LABEL"
-                            description="MOD_IMAGE_ALT_DESC"
+                            label="MOD_IMAGE_IMAGES_IMAGE_ALT_LABEL"
+                            description="MOD_IMAGE_IMAGES_IMAGE_ALT_DESC"
+                        />
+                        <field
+                            name="url"
+                            type="url"
+                            label="MOD_IMAGE_IMAGES_IMAGE_URL_LABEL"
+                            description="MOD_IMAGE_IMAGES_IMAGE_URL_DESC"
                         />
                     </form>
+                </field>
+                <field
+                        name="cover"
+                        type="radio"
+                        label="MOD_IMAGE_COVER_LABEL"
+                        description="MOD_IMAGE_COVER_DESC"
+                        class="btn-group btn-group-yesno"
+                        default="1"
+                        filter="integer"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
                 </field>
             </fieldset>
 

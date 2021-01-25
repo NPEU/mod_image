@@ -28,6 +28,15 @@ if (!empty($images->images0->caption) || !empty($images->images0->credit)) {
     $wrapper = 'figure';
 }
 
+$container_classes = '';
+
+if (isset($module->cover)) {
+    $container_classes = 'u-image-cover  js-image-cover';
+}
+
+if (!empty($container_classes)) {
+    $container_classes = ' class="' + $container_classes + '"';
+}
 ?>
 <?php if ($module->showtitle): ?>
 <<?php echo $hx; ?>><?php echo $module->title; ?></<?php echo $hx; ?>>
@@ -35,8 +44,10 @@ if (!empty($images->images0->caption) || !empty($images->images0->credit)) {
 <?php if($n_images > 1) : ?>
 <!-- @TOTO -->
 <?php else: /* @TODO - need to think about credit lines. */?>
-<<?php echo $wrapper; ?> class="u-image-cover  js-image-cover" style="postiion: relative;">
+<<?php echo $wrapper; echo $container_classes; ?> style="position: relative;">
+    <?php if ($images->images0->url): ?><a href="<?php echo $images->images0->url; ?>"><?php endif; ?>
     <img src="<?php echo JURI::base() . $images->images0->image; ?>" width="600" alt="<?php echo $images->images0->alt; ?>">
+    <?php if ($images->images0->url): ?></a><?php endif; ?>
     <?php if ($has_details): ?>
     <figcaption style="
         position: absolute;
