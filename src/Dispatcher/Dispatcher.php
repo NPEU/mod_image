@@ -28,11 +28,12 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
         $data   = parent::getLayoutData();
         $params = $data['params'];
 
-
+        /*
+        This module doesn't require any extra data but leaving this here in case that changes.
         $data['stuff'] = $this->getHelperFactory()
             ->getHelper('ImageHelper')
             ->getStuff($data['params'], $this->getApplication());
-
+        */
         return $data;
     }
 }

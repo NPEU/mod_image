@@ -20,7 +20,7 @@ class ImageHelper implements DatabaseAwareInterface
     use DatabaseAwareTrait;
 
 
-    public function getStuff(Registry $config, SiteApplication $app): array
+    /*public function getStuff(Registry $config, SiteApplication $app): array
     {
         if (!$app instanceof SiteApplication) {
             return [];
@@ -30,6 +30,6 @@ class ImageHelper implements DatabaseAwareInterface
         // Do some database stuff here.
 
         return ["Hello, world."];
-    }
+    }*/
 
 }
