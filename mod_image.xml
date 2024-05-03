@@ -22,7 +22,7 @@
     <namespace path="src">NPEU\Module\Image</namespace>
 
     <files>
-        <filename module="mod_image">services</filename>
+        <folder module="mod_image">services</folder>
         <folder>language</folder>
         <folder>src</folder>
         <folder>tmpl</folder>
